@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.logo-font {
+    font-family: titillium web, sans-serif
+}
+
+.article-meta {
+    display: block;
+    position: relative;
+    font-weight: 300
+}
+
+.article-meta img {
+    display: inline-block;
+    vertical-align: middle;
+    height: 32px;
+    width: 32px;
+    border-radius: 30px
+}
+
+.article-meta .info {
+    margin: 0 1.5rem 0 .3rem;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1rem
+}
+
+.article-meta .info .author {
+    display: block;
+    font-weight: 500!important
+}
+
+.article-meta .info .date {
+    color: #bbb;
+    font-size: .8rem;
+    display: block
+}
+
+.article-preview {
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    padding: 1.5rem 0
+}
+
+.article-preview .article-meta {
+    margin: 0 0 1rem
+}
+
+.App {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.coll-panel-btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
