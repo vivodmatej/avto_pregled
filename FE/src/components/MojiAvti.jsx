@@ -21,7 +21,7 @@ class MojiAvti extends Component {
             avti: [],
             _avti: [],
             currentPage: 1,
-            cardsPerPage: 3,
+            cardsPerPage: 5,
             _filters: [],
             admin: false,
             checked: false
@@ -55,7 +55,7 @@ class MojiAvti extends Component {
                 })
                 .catch((error) => console.log(error))
         } else {
-            fetch("/api/mojiAvti1?idUporabnik=" + id, {})
+            fetch("/api/mojiAvti?idUporabnik=" + id, {})
                 .then((res) => res.json())
                 .then(data => {
                     const _modeli = data?.modeli

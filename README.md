@@ -15,3 +15,9 @@ u test1@test.si p:123456, ki ni admin
 admini lahko urejajo vse avtomobile, id dodajajo nove znake, modele, menjalnike, uporabnike, goriva, vrata
 
 ne admini lahko dodajajo samo avtomobile in urejajo samo svoje avte
+
+v datoteki avto.mwd je model od baze mysql
+
+v datoteki sql1.sql je sql za ustvarjanje sheme in tabel
+
+v datoteki baza.sql je kopija podatkov iz baze v kateri so že testni podatki

@@ -21,7 +21,7 @@ class AvtoPregled extends Component {
             avti: [],
             _avti: [],
             currentPage: 1,
-            cardsPerPage: 3,
+            cardsPerPage: 5,
             _filters: []
         }
     }
