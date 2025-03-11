@@ -17,7 +17,7 @@ class Modeli extends Component {
     }
 
     getData = () => {
-        fetch("/api/api/modeli", {})
+        fetch("/api/modeli", {})
             .then((res) => res.json())
             .then(data => {
                 const _modeli = data?.models
@@ -57,7 +57,7 @@ class Modeli extends Component {
 
     newModeli = () => {
         const { name, znamkaId } = this.state
-        fetch("/api/api/modeli", {
+        fetch("/api/modeli", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ class Modeli extends Component {
 
     updateModeli = () => {
         const { name, id, znamkaId } = this.state
-        fetch("/api/api/modeli", {
+        fetch("/api/modeli", {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -96,7 +96,7 @@ class Modeli extends Component {
     deleteModeli = (id) => {
         let result = window.confirm("Želiš izbrisati");
         if (result) {
-            fetch("/api/api/modeli", {
+            fetch("/api/modeli", {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',

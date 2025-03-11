@@ -25,7 +25,7 @@ class AvtoForma extends Component {
 
     getData = () => {
         const { id } = this.props;
-        fetch("/api/api/avto", {})
+        fetch("/api/avto", {})
             .then((res) => res.json())
             .then(data => {
                 const _modeli = data?.modeli
@@ -41,7 +41,7 @@ class AvtoForma extends Component {
                     vrata: _vrata,
                 }, () => {
                     if (id) {
-                        fetch("/api/api/getAvto?idAvto=" + id, {})
+                        fetch("/api/getAvto?idAvto=" + id, {})
                             .then((res) => res.json())
                             .then(data => {
                                 const _avto = data?.avto
@@ -105,7 +105,7 @@ class AvtoForma extends Component {
         const body = localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")) : false
         const idUporabnik = body?.idUporabnik
         // console.log('Received values:', { ...values, pogon4: values?.pogon4 ?? false, letnik: year, idUporabnika: idUporabnik });
-        fetch("/api/api/avto", {
+        fetch("/api/avto", {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -132,7 +132,7 @@ class AvtoForma extends Component {
         const body = localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")) : false
         const id = body?.idUporabnik
         // console.log('Received values:', { ...values, pogon4: values?.pogon4 ?? false, letnik: year, idUporabnika: id });
-        fetch("/api/api/avto", {
+        fetch("/api/avto", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

@@ -33,7 +33,7 @@ class MojiAvti extends Component {
         const id = body?.idUporabnik
         const admin = body?.admin
         if (admin) {
-            fetch("/api/api/avti", {})
+            fetch("/api/avti", {})
                 .then((res) => res.json())
                 .then(data => {
                     const _modeli = data?.modeli
@@ -55,7 +55,7 @@ class MojiAvti extends Component {
                 })
                 .catch((error) => console.log(error))
         } else {
-            fetch("/api/api/mojiAvti1?idUporabnik=" + id, {})
+            fetch("/api/mojiAvti1?idUporabnik=" + id, {})
                 .then((res) => res.json())
                 .then(data => {
                     const _modeli = data?.modeli
@@ -151,7 +151,7 @@ class MojiAvti extends Component {
     deleteAvto = (id) => {
         let result = window.confirm("Želiš izbrisati");
         if (result) {
-            fetch("/api/api/avto", {
+            fetch("/api/avto", {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
@@ -175,7 +175,7 @@ class MojiAvti extends Component {
         const id = body?.idUporabnik
         const checked = e.target.checked
         if (!checked) {
-            fetch("/api/api/avti", {})
+            fetch("/api/avti", {})
                 .then((res) => res.json())
                 .then(data => {
                     const _modeli = data?.modeli
@@ -196,7 +196,7 @@ class MojiAvti extends Component {
                 })
                 .catch((error) => console.log(error))
         } else {
-            fetch("/api/api/mojiAvti?idUporabnik=" + id, {})
+            fetch("/api/mojiAvti?idUporabnik=" + id, {})
                 .then((res) => res.json())
                 .then(data => {
                     const _modeli = data?.modeli

@@ -14,7 +14,7 @@ class Menjalnik extends Component {
     }
 
     getData = () => {
-        fetch("/api/api/menjalniki", {})
+        fetch("/api/menjalniki", {})
             .then((res) => res.json())
             .then(menjalniki => {
                 const data = menjalniki.map((el, i) => ({ ...el, key: i + 1 }))
@@ -47,7 +47,7 @@ class Menjalnik extends Component {
 
     newMenjalnik = () => {
         const { name } = this.state
-        fetch("/api/api/menjalniki", {
+        fetch("/api/menjalniki", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -66,7 +66,7 @@ class Menjalnik extends Component {
 
     updateMenjalnik = () => {
         const { name, id } = this.state
-        fetch("/api/api/menjalniki", {
+        fetch("/api/menjalniki", {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -86,7 +86,7 @@ class Menjalnik extends Component {
     deleteMenjalnik = (id) => {
         let result = window.confirm("Želiš izbrisati");
         if (result) {
-            fetch("/api/api/menjalniki", {
+            fetch("/api/menjalniki", {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',

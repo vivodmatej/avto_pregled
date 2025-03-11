@@ -14,7 +14,7 @@ class Znamka extends Component {
     }
 
     getData = () => {
-        fetch("/api/api/znamke", {})
+        fetch("/api/znamke", {})
             .then((res) => res.json())
             .then(znamke => {
                 const data = znamke.map((el, i) => ({ ...el, key: i + 1 }))
@@ -47,7 +47,7 @@ class Znamka extends Component {
 
     newZnamka = () => {
         const { name } = this.state
-        fetch("/api/api/znamke", {
+        fetch("/api/znamke", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -66,7 +66,7 @@ class Znamka extends Component {
 
     updateZnamka = () => {
         const { name, id } = this.state
-        fetch("/api/api/znamke", {
+        fetch("/api/znamke", {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -86,7 +86,7 @@ class Znamka extends Component {
     deleteZnamka = (id) => {
         let result = window.confirm("Želiš izbrisati");
         if (result) {
-            fetch("/api/api/znamke", {
+            fetch("/api/znamke", {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',

@@ -14,7 +14,7 @@ class Vrata extends Component {
     }
 
     getData = () => {
-        fetch("/api/api/vrata", {})
+        fetch("/api/vrata", {})
             .then((res) => res.json())
             .then(vrata => {
                 const data = vrata.map((el, i) => ({ ...el, key: i + 1 }))
@@ -39,7 +39,7 @@ class Vrata extends Component {
 
     newVrata = () => {
         const { kolicina } = this.state
-        fetch("/api/api/vrata", {
+        fetch("/api/vrata", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -58,7 +58,7 @@ class Vrata extends Component {
 
     updateVrata = () => {
         const { kolicina, id } = this.state
-        fetch("/api/api/vrata", {
+        fetch("/api/vrata", {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -78,7 +78,7 @@ class Vrata extends Component {
     deleteVrata = (id) => {
         let result = window.confirm("Želiš izbrisati");
         if (result) {
-            fetch("/api/api/vrata", {
+            fetch("/api/vrata", {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',

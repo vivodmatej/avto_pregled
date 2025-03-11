@@ -73,7 +73,7 @@ const Navbar = () => {
 		navigate("/" + e.key);
 	};
 	const login = (values) => {
-		fetch("/api/api/login", {
+		fetch("/api/login", {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',

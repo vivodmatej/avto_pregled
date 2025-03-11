@@ -27,7 +27,7 @@ class AvtoPregled extends Component {
     }
 
     getData = () => {
-        fetch("/api/api/avti", {})
+        fetch("/api/avti", {})
             .then((res) => res.json())
             .then(data => {
                 const _modeli = data?.modeli

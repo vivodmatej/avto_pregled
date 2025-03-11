@@ -16,7 +16,7 @@ class Uporabniki extends Component {
     }
 
     getData = () => {
-        fetch("/api/api/uporabniki", {})
+        fetch("/api/uporabniki", {})
             .then((res) => res.json())
             .then(uporabniki => {
                 const data = uporabniki.map((el, i) => ({ ...el, key: i + 1 }))
@@ -51,7 +51,7 @@ class Uporabniki extends Component {
 
     updateUporabnik = (values) => {
         const { id } = this.state
-        fetch("/api/api/uporabniki", {
+        fetch("/api/uporabniki", {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ class Uporabniki extends Component {
     deleteUporabnik = (id) => {
         let result = window.confirm("Želiš izbrisati");
         if (result) {
-            fetch("/api/api/uporabniki", {
+            fetch("/api/uporabniki", {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
@@ -92,7 +92,7 @@ class Uporabniki extends Component {
     };
 
     onFinish = (values) => {
-        fetch("/api/api/uporabniki", {
+        fetch("/api/uporabniki", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

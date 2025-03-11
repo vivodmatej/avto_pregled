@@ -14,7 +14,7 @@ class Goriva extends Component {
     }
 
     getData = () => {
-        fetch("/api/api/goriva", {})
+        fetch("/api/goriva", {})
             .then((res) => res.json())
             .then(goriva => {
                 const data = goriva.map((el, i) => ({ ...el, key: i + 1 }))
@@ -47,7 +47,7 @@ class Goriva extends Component {
 
     newGorivo = () => {
         const { name } = this.state
-        fetch("/api/api/goriva", {
+        fetch("/api/goriva", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -66,7 +66,7 @@ class Goriva extends Component {
 
     updateGorivo = () => {
         const { name, id } = this.state
-        fetch("/api/api/goriva", {
+        fetch("/api/goriva", {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -86,7 +86,7 @@ class Goriva extends Component {
     deleteGorivo = (id) => {
         let result = window.confirm("Želiš izbrisati");
         if (result) {
-            fetch("/api/api/goriva", {
+            fetch("/api/goriva", {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
